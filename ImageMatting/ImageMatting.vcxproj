@@ -27,13 +27,13 @@
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
     <ConfigurationType>Application</ConfigurationType>
     <UseDebugLibraries>true</UseDebugLibraries>
-    <PlatformToolset>v120</PlatformToolset>
+    <PlatformToolset>v100</PlatformToolset>
     <CharacterSet>Unicode</CharacterSet>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
     <ConfigurationType>Application</ConfigurationType>
     <UseDebugLibraries>true</UseDebugLibraries>
-    <PlatformToolset>v120</PlatformToolset>
+    <PlatformToolset>v100</PlatformToolset>
     <CharacterSet>Unicode</CharacterSet>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
@@ -68,11 +68,13 @@
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <LinkIncremental>true</LinkIncremental>
+    <IncludePath>$(OPENCV_DIR)\..\..\include;$(IncludePath)</IncludePath>
+    <LibraryPath>$(OPENCV_DIR)\lib;$(LibraryPath)</LibraryPath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <LinkIncremental>true</LinkIncremental>
-    <IncludePath>C:\opencv\include;C:\opencv\build\include;$(IncludePath)</IncludePath>
-    <LibraryPath>C:\opencv\release\lib\Debug;$(LibraryPath)</LibraryPath>
+    <IncludePath>$(OPENCV_DIR)\..\..\include;$(IncludePath)</IncludePath>
+    <LibraryPath>$(OPENCV_DIR)\lib;$(LibraryPath)</LibraryPath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <LinkIncremental>false</LinkIncremental>
@@ -91,6 +93,7 @@
     <Link>
       <SubSystem>Console</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalDependencies>$(OPENCV_DIR)\lib\opencv_core2410d.lib;$(OPENCV_DIR)\lib\opencv_imgproc2410d.lib;$(OPENCV_DIR)\lib\opencv_highgui2410d.lib;$(OPENCV_DIR)\lib\opencv_ml2410d.lib;$(OPENCV_DIR)\lib\opencv_video2410d.lib;$(OPENCV_DIR)\lib\opencv_features2d2410d.lib;$(OPENCV_DIR)\lib\opencv_calib3d2410d.lib;$(OPENCV_DIR)\lib\opencv_objdetect2410d.lib;$(OPENCV_DIR)\lib\opencv_contrib2410d.lib;$(OPENCV_DIR)\lib\opencv_legacy2410d.lib;$(OPENCV_DIR)\lib\opencv_flann2410d.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
@@ -106,6 +109,7 @@
       <SubSystem>Console</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <AdditionalDependencies>$(OPENCV_DIR)\lib\opencv_core2410d.lib;$(OPENCV_DIR)\lib\opencv_highgui2410d.lib;$(OPENCV_DIR)\lib\opencv_video2410d.lib;$(OPENCV_DIR)\lib\opencv_ml2410d.lib;$(OPENCV_DIR)\lib\opencv_legacy2410d.lib;$(OPENCV_DIR)\lib\opencv_objdetect2410d.lib;$(OPENCV_DIR)\lib\opencv_imgproc2410d.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>$(OPENCV_DIR)\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
