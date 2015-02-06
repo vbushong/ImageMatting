@@ -15,7 +15,7 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="ImageMatting.cpp">
+    <ClCompile Include="grabcut.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>

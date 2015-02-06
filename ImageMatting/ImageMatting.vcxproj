@@ -18,6 +18,9 @@
       <Platform>x64</Platform>
     </ProjectConfiguration>
   </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="grabcut.cpp" />
+  </ItemGroup>
   <PropertyGroup Label="Globals">
     <ProjectGuid>{436CDCF3-E822-4F3E-B060-686B1236F58E}</ProjectGuid>
     <Keyword>Win32Proj</Keyword>
@@ -93,7 +96,7 @@
     <Link>
       <SubSystem>Console</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
-      <AdditionalDependencies>$(OPENCV_DIR)\lib\opencv_core2410d.lib;$(OPENCV_DIR)\lib\opencv_imgproc2410d.lib;$(OPENCV_DIR)\lib\opencv_highgui2410d.lib;$(OPENCV_DIR)\lib\opencv_ml2410d.lib;$(OPENCV_DIR)\lib\opencv_video2410d.lib;$(OPENCV_DIR)\lib\opencv_features2d2410d.lib;$(OPENCV_DIR)\lib\opencv_calib3d2410d.lib;$(OPENCV_DIR)\lib\opencv_objdetect2410d.lib;$(OPENCV_DIR)\lib\opencv_contrib2410d.lib;$(OPENCV_DIR)\lib\opencv_legacy2410d.lib;$(OPENCV_DIR)\lib\opencv_flann2410d.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies>C:\opencv\build\x64\vc12\lib\opencv_ts300d.lib;C:\opencv\build\x64\vc12\lib\opencv_world300d.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
@@ -104,7 +107,7 @@
       <Optimization>Disabled</Optimization>
       <PreprocessorDefinitions>WIN32;_DEBUG;_CONSOLE;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <AdditionalIncludeDirectories>C:\opencv\build\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
-      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -147,9 +150,6 @@
       <OptimizeReferences>true</OptimizeReferences>
     </Link>
   </ItemDefinitionGroup>
-  <ItemGroup>
-    <ClCompile Include="ImageMatting.cpp" />
-  </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
   </ImportGroup>

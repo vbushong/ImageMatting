@@ -51,7 +51,7 @@ void main()
 		image = cv::imread("korver.jpg");
 
 		// define bounding rectangle 
-		cv::Rect rectangle(50, 70, image.cols - 150, image.rows - 180);
+		Rect rectangle(50, 50, 350, 300);
 
 		cv::Mat result; // segmentation result (4 possible values)
 		cv::Mat bgModel, fgModel; // the models (internally used)
